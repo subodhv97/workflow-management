@@ -13,7 +13,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SidebarComponent } from './principal/sidebar/sidebar.component';
+import { PrinheaderComponent } from './principal/prinheader/prinheader.component'
 
 
 
@@ -28,6 +30,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'
     FacultyComponent,
     SignupComponent,
     LoginComponent,
+    SidebarComponent,
+    PrinheaderComponent,
 
 
   ],
