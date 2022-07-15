@@ -1,0 +1,40 @@
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+    <div class="container py-5 h-100 w-75">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <img src="../../../assets/images/login image.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem; height:200px" alt="Sample photo">
+                    <div class="card-body">
+                        <h3 class="text-center">Login Form</h3>
+
+                        <form class="px-md-2">
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form2Example17">Select Role</label>
+                                <select class="form-select shadow-none" aria-label="Default select example">
+                                    <option selected>Select Role</option>
+                                    <option value="1">Principal</option>
+                                    <option value="2">HOD</option>
+                                    <option value="3">Faculty</option>
+                                </select>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form2Example17">Email address</label>
+                                <input type="email" id="form2Example17" class="form-control shadow-none" placeholder="Enter Email/Username" />
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form2Example27">Password</label>
+                                <input type="password" id="form2Example27" class="form-control shadow-none" placeholder="Enter your password" />
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-success btn-lg btn-block" type="button">Login</button>
+                            </div>
+
+                            <p class="mb-5 pb-lg-2 text-center" style="color: #010314;">Don't have an account? <a [routerLink]="['/signup']" routerLinkActive="router-link-active" style="color: #1b2ad5;">Register here</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
