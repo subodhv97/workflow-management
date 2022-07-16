@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg color">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand text-color fw-bold" [routerLink]="['/hod']" routerLinkActive="router-link-active">HOD Dashboard</a>
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 px-0">
+                <li class="nav-item">
+                    <a class="nav-link text-color fw-bold" [routerLink]="['/createmeeting']" routerLinkActive="router-link-active">Create Meeting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-color fw-bold" [routerLink]="['/meetingnotifiation']" routerLinkActive="router-link-active">Meeting Notification</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-color fw-bold" [routerLink]="['/requestleave']" routerLinkActive="router-link-active">Leave</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-color fw-bold" [routerLink]="['/approveleave']" routerLinkActive="router-link-active">Approve Leave</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-color fw-bold" [routerLink]="['/addfaculty']" routerLinkActive="router-link-active">Add Faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-color fw-bold" [routerLink]="['/forum']" routerLinkActive="router-link-active">Forum</a>
+                </li>
+
+            </ul>
+            <li class="d-flex me-2">
+                <a class="nav-link text-color fw-bold" [routerLink]="['/login']" routerLinkActive="router-link-active">Logout</a>
+            </li>
+        </div>
+    </div>
+</nav>

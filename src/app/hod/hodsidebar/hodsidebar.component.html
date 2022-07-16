@@ -1,49 +1,58 @@
 <div class="d-flex flex-column  py-3 bg-light m-0" style="width: 200px; ">
-    <a [routerLink]="['/principal']" routerLinkActive="router-link-active" class="d-flex align-items-center  link-dark text-decoration-none">
+    <a [routerLink]="['/hod']" routerLinkActive="router-link-active" class="d-flex align-items-center  link-dark text-decoration-none">
         <div class="mx-auto">
             <img class="rounded-circle mx-auto" alt="100x100" src="../../../assets/images/adminicon.jpg" style="height: 150px;width:150px">
-            <h2 class="mt-2 mb-0 text-center mx-auto">Principal Name</h2>
-            <h5 class=" text-center mx-auto">(Organization)</h5>
+            <h2 class="mt-2 mb-0 text-center mx-auto">HOD Name</h2>
+            <h5 class=" text-center mx-auto">(Department)</h5>
         </div>
     </a>
     <hr class="">
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a [routerLink]="['/principal']" routerLinkActive="router-link-active" class="nav-link active" aria-current="page">
-                <svg class="bi me-2" width="16" height="16"></svg>
+            <a [routerLink]="['/hod']" routerLinkActive="router-link-active" class="nav-link active" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                </svg>
                 Dashboard
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/createmeeting']" routerLinkActive="router-link-active" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2" />
+                </svg>
+                Create Meeting
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/meetingnotifiation']" routerLinkActive="router-link-active" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#table" />
+                </svg>
+                Meeting Notification
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/approveleave']" routerLinkActive="router-link-active" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#grid" />
+                </svg>
+                Approve Leave
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/requestleave']" routerLinkActive="router-link-active" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#grid" />
+                </svg>
+                Leave
             </a>
         </li>
         <li>
             <a [routerLink]="['/addfaculty']" routerLinkActive="router-link-active" class="nav-link link-dark">
                 <svg class="bi me-2" width="16" height="16">
-                    <use xlink:href="#speedometer2" />
-                </svg>
-                Add Faculty
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/addhod']" routerLinkActive="router-link-active" class="nav-link link-dark">
-                <svg class="bi me-2" width="16" height="16">
-                    <use xlink:href="#table" />
-                </svg>
-                Add HOD
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/managefaculty']" routerLinkActive="router-link-active" class="nav-link link-dark">
-                <svg class="bi me-2" width="16" height="16">
-                    <use xlink:href="#grid" />
-                </svg>
-                Manage Faculty
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/createmeting']" routerLinkActive="router-link-active" class="nav-link link-dark">
-                <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#people-circle" />
                 </svg>
-                Creating Meeting
+                Add Faculty
             </a>
         </li>
         <li>
@@ -52,14 +61,6 @@
                     <use xlink:href="#people-circle" />
                 </svg>
                 Forum
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/leaveapprovel']" routerLinkActive="router-link-active" class="nav-link link-dark">
-                <svg class="bi me-2" width="16" height="16">
-                    <use xlink:href="#people-circle" />
-                </svg>
-                Leave Approvel
             </a>
         </li>
         <hr>
