@@ -25,7 +25,6 @@ import { MeetingnotificationComponent } from './faculty/meetingnotification/meet
 import { ForumComponent } from './faculty/forum/forum.component';
 import { LeaveComponent } from './faculty/leave/leave.component';
 import { AddfacultyComponent } from './principal/addfaculty/addfaculty.component';
-import { AddhodComponent } from './principal/addhod/addhod.component';
 import { ManagefacultyComponent } from './principal/managefaculty/managefaculty.component';
 import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.component';
 import { LeaveapprovelComponent } from './principal/leaveapprovel/leaveapprovel.component';
@@ -57,7 +56,6 @@ import { ApproveleaveComponent } from './hod/approveleave/approveleave.component
     ForumComponent,
     LeaveComponent,
     AddfacultyComponent,
-    AddhodComponent,
     ManagefacultyComponent,
     CreatemeetingComponent,
     LeaveapprovelComponent,

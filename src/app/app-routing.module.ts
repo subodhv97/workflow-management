@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { from } from 'rxjs';
-import { AppComponent } from './app.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { LeaveComponent } from './faculty/leave/leave.component';
 import { MeetingnotificationComponent } from './faculty/meetingnotification/meetingnotification.component';
@@ -13,7 +11,6 @@ import { RequestleaveComponent } from './hod/requestleave/requestleave.component
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { AddhodComponent } from './principal/addhod/addhod.component';
 import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.component';
 // import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.component';
 import { ForumComponent } from './principal/forum/forum.component';
@@ -29,7 +26,6 @@ const routes: Routes = [
   {
     path: 'principal', component: PrincipalComponent, children: [
       { path: 'addfaculty', component: AddfacultyComponent },
-      { path: 'addhod', component: AddhodComponent },
       { path: 'createmeting', component: CreatemeetingComponent },
       { path: 'forum', component: ForumComponent },
       { path: 'leaveapprovel', component: LeaveapprovelComponent },
