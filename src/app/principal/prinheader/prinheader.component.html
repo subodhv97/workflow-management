@@ -1,29 +1,27 @@
 <nav class="navbar navbar-expand-lg color">
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="navbar-brand text-color fw-bold" [routerLink]="['/principal']" routerLinkActive="router-link-active">Principal Dashboard</a>
+            <a class="navbar-brand text-color fw-bold" [routerLink]="['principal']" routerLinkActive="router-link-active">Principal Dashboard</a>
 
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 px-0">
                 <li class="nav-item">
-                    <a class="nav-link text-color fw-bold" [routerLink]="['/addfaculty']" routerLinkActive="router-link-active">Add Faculty</a>
+                    <a class="nav-link text-color fw-bold" [routerLink]="['addfaculty']" routerLinkActive="router-link-active">Add Faculty</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-color fw-bold" [routerLink]="['managefaculty']" routerLinkActive="router-link-active">Manage Faculty</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color fw-bold" [routerLink]="['/addhod']" routerLinkActive="router-link-active">Add HOD</a>
+                    <a class="nav-link text-color fw-bold" [routerLink]="['createmeting']" routerLinkActive="router-link-active">Creating Meeting</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color fw-bold" [routerLink]="['/managefaculty']" routerLinkActive="router-link-active">Manage Faculty</a>
+                    <a class="nav-link text-color fw-bold" [routerLink]="['forum']" routerLinkActive="router-link-active">Forum</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color fw-bold" [routerLink]="['/createmeting']" routerLinkActive="router-link-active">Creating Meeting</a>
+                    <a class="nav-link text-color fw-bold" [routerLink]="['leaveapprovel']" routerLinkActive="router-link-active">Leave Approvel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color fw-bold" [routerLink]="['/forum']" routerLinkActive="router-link-active">Forum</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-color fw-bold" [routerLink]="['/leaveapprovel']" routerLinkActive="router-link-active">Leave Approvel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-color fw-bold" [routerLink]="['/qpappeovel']" routerLinkActive="router-link-active">QP Approval</a>
+                    <a class="nav-link text-color fw-bold" [routerLink]="['qpappeovel']" routerLinkActive="router-link-active">QP Approval</a>
                 </li>
             </ul>
             <li class="d-flex me-2">
