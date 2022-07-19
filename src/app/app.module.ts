@@ -30,7 +30,7 @@ import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.
 import { LeaveapprovelComponent } from './principal/leaveapprovel/leaveapprovel.component';
 import { QpapprovelComponent } from './principal/qpapprovel/qpapprovel.component';
 import { RequestleaveComponent } from './hod/requestleave/requestleave.component';
-import { ApproveleaveComponent } from './hod/approveleave/approveleave.component'
+import { ApproveleaveComponent } from './hod/approveleave/approveleave.component';
 
 
 
@@ -72,6 +72,7 @@ import { ApproveleaveComponent } from './hod/approveleave/approveleave.component
     HttpClientModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    FormsModule,
 
 
   ],

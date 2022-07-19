@@ -1,0 +1,21 @@
+h2{
+    padding-left: 15%;
+}
+
+input{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    
+   
+}
+
+li{
+    list-style-type: none;
+}
+button{
+    margin-left: 15%;
+    align-content: center;
+}

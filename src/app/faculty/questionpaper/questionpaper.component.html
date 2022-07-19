@@ -1,1 +1,26 @@
-<p>questionpaper works!</p>
+<div class="paperform">
+    <h2>Question Papers</h2>
+    <form #uplodPaperForm="ngForm" (ngSubmit)="getData(uplodPaperForm.value)">
+        <ul>
+            <label for="facultyID">Faculty ID:</label>
+            <li><input type="text" ngModel name="facultyID"></li>
+            <br>
+            <label for="facultyName">Faculty Name:</label>
+            <li><input type="text" ngModel name="facultyName"></li>
+            <br>
+            <label for="subjectName">Subject:</label>
+            <li><input type="text" ngModel name="subjectName"></li>
+            <br>
+            <label for="className">Class:</label>
+            <li><input type="number" ngModel name="className"></li>
+            <br>
+            <label for="paperDate"> Select Date:</label>
+            <li><input type="date" ngModel name="paperDate"></li>
+            <br>
+            <label for="mypaper">Upoad Paper</label>
+            <li><input type="file" ngModel name="mypaper"></li>
+        </ul>
+        <br>
+        <button>Submit</button>
+    </form>
+</div>
