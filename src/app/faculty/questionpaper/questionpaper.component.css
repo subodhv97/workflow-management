@@ -1,12 +1,15 @@
 h2{
-    padding-left: 15%;
+    text-align: center;
+}
+.paperform{
+        
 }
 
 input{
     width: 40%;
-    padding: 12px;
+    padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 3px;
     resize: vertical;
     
    
@@ -18,4 +21,6 @@ li{
 button{
     margin-left: 16%;
     align-content: center;
+    background-color:rgb(16, 106, 241);
+    color: white;
 }

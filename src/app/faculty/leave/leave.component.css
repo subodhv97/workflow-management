@@ -1,0 +1,52 @@
+li {
+    list-style: none;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+
+
+}
+
+.leave-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+table {
+    border: rgb(0, 0, 0);
+    border-radius: 2px;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 20px;
+    background-color: rgb(167, 185, 246);
+}
+
+th {
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(16, 106, 241);
+    color: white;
+
+
+}
+
+h2 {
+    text-align: center;
+}
+.request-col{
+    padding-right: 20px;
+}
+.status-col{
+    padding-left: 40px;
+}

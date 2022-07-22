@@ -1,1 +1,50 @@
-<p>leave works!</p>
+<div class="leave-main">
+    <div class="col-sm-6">
+        <div class="request-col">
+            <h2>Leave Request Form</h2>
+            <form #leaveFrom="ngForm" (ngSubmit)="getLeave(leaveFrom.value)">
+                <ul>
+                    <label for="facultyName">Faculty Name:</label>
+                    <li><input type="text" ngModel name="facultyName"></li>
+                    <br>
+                    <label for="facultyID">Faculty ID:</label>
+                    <li><input type="text" ngModel name="facultyID"></li>
+                    <br>
+                    <label for="facultyReason">Reason:</label>
+                    <li><input type="text" ngModel name="facultyReason" style="height:6rem ;"></li>
+                    <br>
+                    <label for="startDate">Date From:</label>
+                    <li><input type="date" ngModel name="startDate"></li>
+                    <br>
+                    <label for="endDate">Date To:</label>
+                    <li><input type="date" ngModel name="endDate"></li>
+                    <br>
+                    <button (click)="addLeave(leaveFrom.value)">Submit</button>
+
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="status-col">
+            <h2>Leave Approval Status</h2>
+            <table>
+
+                <tr>
+                    
+                    <th>Faculty ID</th>
+                    <th>Date</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                </tr>
+                <tr *ngFor="let item of list">
+                    
+                    <td>{{item.facultyID}}</td>
+                    <td>{{item.startDate}}</td>
+                    <td>{{item.facultyReason}}</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
