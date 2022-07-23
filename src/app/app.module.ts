@@ -10,7 +10,7 @@ import { HodComponent } from './hod/hod.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -72,7 +72,7 @@ import { ApproveleaveComponent } from './hod/approveleave/approveleave.component
     HttpClientModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
-    FormsModule,
+    ReactiveFormsModule
 
 
   ],

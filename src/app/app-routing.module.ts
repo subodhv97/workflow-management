@@ -6,14 +6,17 @@ import { MeetingnotificationComponent } from './faculty/meetingnotification/meet
 import { QuestionpaperComponent } from './faculty/questionpaper/questionpaper.component';
 import { AddfacultyComponent } from './hod/addfaculty/addfaculty.component';
 import { ApproveleaveComponent } from './hod/approveleave/approveleave.component';
+import { CreatemeetingComponent } from './hod/createmeeting/createmeeting.component';
+import { ForumComponent } from './hod/forum/forum.component';
+
 import { HodComponent } from './hod/hod.component';
 import { RequestleaveComponent } from './hod/requestleave/requestleave.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.component';
 // import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.component';
-import { ForumComponent } from './principal/forum/forum.component';
+// import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.component';
+// import { ForumComponent } from './principal/forum/forum.component';
 import { LeaveapprovelComponent } from './principal/leaveapprovel/leaveapprovel.component';
 import { ManagefacultyComponent } from './principal/managefaculty/managefaculty.component';
 import { PrincipalComponent } from './principal/principal.component';
