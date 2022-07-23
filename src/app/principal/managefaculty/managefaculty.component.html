@@ -1,1 +1,40 @@
-<p>managefaculty works!</p>
+<div class="container m-0 p-0">
+    <h2>Manage Faculty</h2>
+</div>
+<table class="table table-hover table-bordered m-0 p-0 ">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Role</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Dob</th>
+            <th scope="col">Profile</th>
+            <th scope="col">Password</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Edit</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <td>{{item.id}}</td>
+            <td>{{item.role}}</td>
+            <td>{{item.firstname}}</td>
+            <td>{{item.lastname}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phone}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.dob}}</td>
+            <td>img{{item.profile}}</td>
+            <td>{{item.password}}</td>
+            <td class="m-0"><a (click)="delete(item.id)" class="btn btn-danger">Delete</a></td>
+            <td class="m-0"><a (click)="edit()" class="btn btn-success">Edit</a></td>
+        </tr>
+    </tbody>
+</table>

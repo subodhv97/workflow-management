@@ -1,1 +1,91 @@
-<p>createmeeting works!</p>
+<div class="container">
+    <h1 class="text-center text-primary mt-3">Meeting Notification</h1>
+</div>
+
+<table class="table table-striped table-hover table-bordered px-3">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Place</th>
+            <th scope="col">Description</th>
+            <th scope="col">Url</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <th>{{item.id}}</th>
+            <th>{{item.subject}}</th>
+            <th>{{item.data}}</th>
+            <th>{{item.time}}</th>
+            <th>{{item.place}}</th>
+            <th>{{item.description}}</th>
+            <th><a class="outline-none" href="{{item.url}}">Visit Here</a></th>
+            <td class="m-0"><a (click)="delete(item.id)" class="btn btn-danger">Delete</a></td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+<hr>
+
+
+
+<div class="container">
+    <h1 class="text-center text-primary">Let's Create a Meeting</h1>
+</div>
+<section class=" h-custom m-0 p-0 w-100">
+    <div class="container py-5 h-100 w-75">
+        <div class="row d-flex justify-content-center align-items-center h-100 w-100">
+
+            <div class="card rounded-3">
+
+                <div class="card-body">
+                    <h1 class="text-center my-3">Create Meeting</h1>
+
+                    <form (ngSubmit)="meetingSubmit()" class="px-md-2 my-4">
+
+                        <div class="form-outline my-2">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input [(ngModel)]="meeting.subject" name="subject" type="text" id="subject" class="form-control shadow-none" />
+                        </div>
+
+                        <div class="form-outline my-2">
+                            <label for="date" class="form-label">Date</label>
+                            <input [(ngModel)]="meeting.date" name="date" type="date" class="form-control shadow-none" id="date" />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label for="time" class="form-label">Time</label>
+                            <input [(ngModel)]="meeting.time" name="time" type="time" class="form-control shadow-none" id="time" />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label for="place" class="form-label">Place</label>
+                            <input [(ngModel)]="meeting.place" name="place" type="text" class="form-control shadow-none" id="place" />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label for="desc" class="form-label">Description</label>
+                            <input [(ngModel)]="meeting.description" name="desc" type="textarea" class="form-control shadow-none" id="desc" />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label for="url" class="form-label">Url</label>
+                            <input [(ngModel)]="meeting.url" name="url" type="textarea" class="form-control shadow-none" id="url" />
+                        </div>
+
+
+
+
+                        <button type="submit" class="btn btn-success btn-lg mb-1">Create Meeting</button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

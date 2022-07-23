@@ -1,1 +1,29 @@
-<p>meetingnotification works!</p>
+<div class="container">
+    <h1 class="text-center text-primary">Meeting Notification</h1>
+</div>
+
+<table class="table table-striped table-hover table-bordered px-3">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Place</th>
+            <th scope="col">Description</th>
+            <th scope="col">Url</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <th>{{item.id}}</th>
+            <th>{{item.subject}}</th>
+            <th>{{item.data}}</th>
+            <th>{{item.time}}</th>
+            <th>{{item.place}}</th>
+            <th>{{item.description}}</th>
+            <th><a class="outline-none" href="{{item.url}}">{{item.url}}</a></th>
+
+        </tr>
+    </tbody>
+</table>

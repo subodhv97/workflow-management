@@ -7,27 +7,36 @@
                     <div class="card-body">
                         <h3 class="text-center">Login Form</h3>
 
-                        <form class="px-md-2">
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>{{message}}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <form class="px-md-2" (ngSubmit)="formSubmit()" #loginform="ngForm">
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example17">Select Role</label>
-                                <select class="form-select shadow-none" aria-label="Default select example">
+                                <select class="form-select shadow-none" aria-label="Default select example" [(ngModel)]="loginData.role" name="role" #role="ngModel" required>
                                     <option selected>Select Role</option>
-                                    <option value="1">Principal</option>
-                                    <option value="2">HOD</option>
-                                    <option value="3">Faculty</option>
+                                    <option value="principal">Principal</option>
+                                    <option value="hod">HOD</option>
+                                    <option value="faculty">Faculty</option>
                                 </select>
                             </div>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example17">Email address</label>
-                                <input type="email" id="form2Example17" class="form-control shadow-none" placeholder="Enter Email/Username" />
+                                <input [(ngModel)]="loginData.email" name="email" type="email" id="form2Example17" class="form-control shadow-none" placeholder="Enter Email/Username" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" #email="ngModel"
+                                    [class.is-invalid]="email.invalid && email.touched">
+                                <!-- <div *ngIf="email.errors && (email.invalid && email.touched)">
+                                    <small class="text-danger" *ngIf="email.errors.required">EmailId id required</small>
+                                    <small>Enter the valid email</small>
+                                </div> -->
                             </div>
 
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example27">Password</label>
-                                <input type="password" id="form2Example27" class="form-control shadow-none" placeholder="Enter your password" />
+                                <input type="password" [(ngModel)]="loginData.password" name="password" id="form2Example27" class="form-control shadow-none" placeholder="Enter your password" required />
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-success btn-lg btn-block" type="button">Login</button>
+                                <button class="btn btn-success btn-lg btn-block shadow-none" type="submit">Login</button>
                             </div>
 
                             <p class="mb-5 pb-lg-2 text-center" style="color: #010314;">Don't have an account? <a [routerLink]="['/signup']" routerLinkActive="router-link-active" style="color: #1b2ad5;">Register here</a></p>

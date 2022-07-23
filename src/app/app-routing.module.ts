@@ -4,7 +4,7 @@ import { FacultyComponent } from './faculty/faculty.component';
 import { LeaveComponent } from './faculty/leave/leave.component';
 import { MeetingnotificationComponent } from './faculty/meetingnotification/meetingnotification.component';
 import { QuestionpaperComponent } from './faculty/questionpaper/questionpaper.component';
-import { AddfacultyComponent } from './hod/addfaculty/addfaculty.component';
+import { AddfacultyComponent } from './principal/addfaculty/addfaculty.component';
 import { ApproveleaveComponent } from './hod/approveleave/approveleave.component';
 import { HodComponent } from './hod/hod.component';
 import { RequestleaveComponent } from './hod/requestleave/requestleave.component';
@@ -18,12 +18,16 @@ import { LeaveapprovelComponent } from './principal/leaveapprovel/leaveapprovel.
 import { ManagefacultyComponent } from './principal/managefaculty/managefaculty.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { QpapprovelComponent } from './principal/qpapprovel/qpapprovel.component';
+// import { FacultyGuard } from './services/faculty.guard';
+// import { HodGuard } from './services/hod.guard';
+// import { PrincipalGuard } from './services/principal.guard';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   {
+    // canActivate: [PrincipalGuard],
     path: 'principal', component: PrincipalComponent, children: [
       { path: 'addfaculty', component: AddfacultyComponent },
       { path: 'createmeting', component: CreatemeetingComponent },
@@ -35,6 +39,7 @@ const routes: Routes = [
     ]
   },
   {
+    // canActivate: [HodGuard],
     path: 'hod', component: HodComponent, children: [
       { path: 'addfaculty', component: AddfacultyComponent },
       { path: 'approveleave', component: ApproveleaveComponent },
@@ -46,6 +51,7 @@ const routes: Routes = [
     ]
   },
   {
+    // canActivate: [FacultyGuard],
     path: 'faculty', component: FacultyComponent, children: [
       { path: 'forum', component: ForumComponent },
       { path: 'leave', component: LeaveComponent },

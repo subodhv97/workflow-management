@@ -10,7 +10,7 @@ import { HodComponent } from './hod/hod.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -31,6 +31,7 @@ import { LeaveapprovelComponent } from './principal/leaveapprovel/leaveapprovel.
 import { QpapprovelComponent } from './principal/qpapprovel/qpapprovel.component';
 import { RequestleaveComponent } from './hod/requestleave/requestleave.component';
 import { ApproveleaveComponent } from './hod/approveleave/approveleave.component'
+// import { authInterceptorProvider } from './services/auth.intercepter';
 
 
 
@@ -72,9 +73,12 @@ import { ApproveleaveComponent } from './hod/approveleave/approveleave.component
     HttpClientModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    ReactiveFormsModule,
+    HttpClientModule
 
 
   ],
+  // authInterceptorProvider
   providers: [],
   bootstrap: [AppComponent]
 })

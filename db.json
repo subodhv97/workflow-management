@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "role": "hod",
+      "name": "Akhilesh Yadav",
+      "username": "akhil123",
+      "email": "yadavakhilesh201616@gmail.com",
+      "phone": "08799407454",
+      "subject": "Physics",
+      "education": "CSE",
+      "experience": "1",
+      "dob": "2022-07-22",
+      "gender": "male",
+      "profile": "C:\\fakepath\\Web capture_14-7-2022_144513_localhost.jpeg",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "role": "faculty",
+      "name": "Akhilesh Yadav",
+      "username": "akhil123",
+      "email": "abcd@gmail.com",
+      "phone": "08799407454",
+      "subject": "math",
+      "education": "ME",
+      "experience": "4",
+      "dob": "2022-07-22",
+      "gender": "male",
+      "profile": "C:\\fakepath\\Web capture_17-7-2022_135222_localhost.jpeg",
+      "password": "1234"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
