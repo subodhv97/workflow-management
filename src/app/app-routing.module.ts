@@ -12,15 +12,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.component';
-// import { CreatemeetingComponent } from './principal/createmeeting/createmeeting.component';
-import { ForumComponent } from './principal/forum/forum.component';
 import { LeaveapprovelComponent } from './principal/leaveapprovel/leaveapprovel.component';
 import { ManagefacultyComponent } from './principal/managefaculty/managefaculty.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { QpapprovelComponent } from './principal/qpapprovel/qpapprovel.component';
-// import { FacultyGuard } from './services/faculty.guard';
-// import { HodGuard } from './services/hod.guard';
-// import { PrincipalGuard } from './services/principal.guard';
+import { ForumComponent } from './principal/forum/forum.component';
+
 
 
 const routes: Routes = [

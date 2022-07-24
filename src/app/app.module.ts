@@ -22,7 +22,6 @@ import { FacultysidebarComponent } from './faculty/facultysidebar/facultysidebar
 import { FacultyheaderComponent } from './faculty/facultyheader/facultyheader.component';
 import { QuestionpaperComponent } from './faculty/questionpaper/questionpaper.component';
 import { MeetingnotificationComponent } from './faculty/meetingnotification/meetingnotification.component';
-import { ForumComponent } from './faculty/forum/forum.component';
 import { LeaveComponent } from './faculty/leave/leave.component';
 import { AddfacultyComponent } from './principal/addfaculty/addfaculty.component';
 import { ManagefacultyComponent } from './principal/managefaculty/managefaculty.component';
@@ -31,6 +30,8 @@ import { LeaveapprovelComponent } from './principal/leaveapprovel/leaveapprovel.
 import { QpapprovelComponent } from './principal/qpapprovel/qpapprovel.component';
 import { RequestleaveComponent } from './hod/requestleave/requestleave.component';
 import { ApproveleaveComponent } from './hod/approveleave/approveleave.component'
+import { ForumComponent } from './principal/forum/forum.component';
+
 // import { authInterceptorProvider } from './services/auth.intercepter';
 
 
@@ -54,7 +55,6 @@ import { ApproveleaveComponent } from './hod/approveleave/approveleave.component
     FacultyheaderComponent,
     QuestionpaperComponent,
     MeetingnotificationComponent,
-    ForumComponent,
     LeaveComponent,
     AddfacultyComponent,
     ManagefacultyComponent,
@@ -63,6 +63,7 @@ import { ApproveleaveComponent } from './hod/approveleave/approveleave.component
     QpapprovelComponent,
     RequestleaveComponent,
     ApproveleaveComponent,
+    ForumComponent
 
 
   ],

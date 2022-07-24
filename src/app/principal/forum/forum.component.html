@@ -1,1 +1,48 @@
-<p>forum works!</p>
+<div class="container my-3">
+    <form (ngSubmit)="forumSubmit()">
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <input [(ngModel)]="forum.name" name="name" type="text" id="name" class="form-control shadow-none" />
+                    <div id="name" class="form-text">Enter name for message identity</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <input [(ngModel)]="forum.message" name="message" type="text" class="form-control" id="message" aria-describedby="message" placeholder="Enter message">
+                    <div id="message" class="form-text">Leave your message here to communicate with other</div>
+                </div>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<hr>
+
+<section class="container w-50">
+    <div class="container">
+        <h1 class="text-center text-primary mt-3">Forum Message</h1>
+    </div>
+    <table class="table ">
+        <thead>
+            <tr>
+                <!-- <th scope="col">ID</th> -->
+                <th scope="col">Name</th>
+                <th scope="col">Message</th>
+                <th scope="col">Delete Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data" class="m-0 p-0">
+                <!-- <th>{{item.id}}</th> -->
+                <th>{{item.name}}</th>
+                <th>{{item.message}}</th>
+                <td class="p-0"><a (click)="delete(item.id)" class="hover text-center"><img src="../../../assets/images/delete.png" alt="" class="vectorimage hover"></a></td>
+
+            </tr>
+        </tbody>
+    </table>
+</section>

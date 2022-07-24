@@ -1,1 +1,63 @@
-<p>requestleave works!</p>
+<div class="container mt-5">
+    <section>
+        <h2 class="text-center text-primary fw-bold">Leave Request Form</h2>
+        <div class="container w-75">
+            <form (ngSubmit)="getLeave()">
+                <div class="form-outline my-2">
+                    <label class="form-label" for="form3Example1q">Name</label>
+                    <input [(ngModel)]="leave.name" name="username" type="username" id="form3Example1q" class="form-control shadow-none" required />
+                </div>
+                <div class="form-outline my-2">
+                    <label class="form-label" for="form3Example1q">Role</label>
+                    <input [(ngModel)]="leave.role" name="username" readonly type="text" id="form3Example1q" value="faculty" class="form-control shadow-none" required />
+                </div>
+                <div class="form-outline my-2">
+                    <label class="form-label" for="form3Example1q">Leave Subject</label>
+                    <input [(ngModel)]="leave.subject" name="subject" type="text" id="subject" class="form-control shadow-none" required />
+                </div>
+
+                <div class="col">
+                    <label class="form-label" for="dateFrom">Date From</label>
+                    <input [(ngModel)]="leave.dateFrom" name="dateFrom" type="date" id="dateFrom" class="form-control shadow-none" placeholder="firstname" required />
+                </div>
+                <div class="col">
+                    <label class="form-label" for="form3Example1q">Date To</label>
+                    <input [(ngModel)]="leave.dateTo" name="dateTo" type="date" id="dateTo" class="form-control shadow-none" placeholder="lastname">
+                </div>
+                <div class="form-outline my-2">
+                    <label class="form-label" for="reason">Leave Reason</label>
+                    <input [(ngModel)]="leave.reason" name="reason" type="text" id="reason" class="form-control shadow-none" required />
+                </div>
+                <button class="btn btn-primary shadow-none hover" type="submit">Submit Leave</button>
+            </form>
+        </div>
+    </section>
+</div>
+<div class="container mt-5">
+    <section>
+        <h2 class="text-center text-primary">Leave Approval Status</h2>
+        <table class="table table-bordered table-striped">
+
+            <tr>
+                <th>Faculty Name</th>
+                <th>Subject</th>
+                <th>DateFrom</th>
+                <th>DateTo</th>
+                <th>Reason</th>
+                <th>Status</th>
+            </tr>
+            <tr *ngFor="let item of data">
+
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.role}}</td>
+                <td>{{item.subject}}</td>
+                <td>{{item.reason}}</td>
+                <td>{{item.dateFrom}}</td>
+                <td>{{item.dateTo}}</td>
+                <td>{{item.sattus}}</td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+</div>

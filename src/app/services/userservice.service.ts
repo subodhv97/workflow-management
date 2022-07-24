@@ -12,7 +12,6 @@ import baseUrl from './helper';
 export class UserserviceService {
   dataarray = [];
   constructor(private http: HttpClient) {
-
   }
 
   //SignUp service

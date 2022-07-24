@@ -1,1 +1,42 @@
-<p>leaveapprovel works!</p>
+<div class="container mt-5">
+    <section>
+        <h2 class="text-center text-primary">Leave Approval Status</h2>
+        <table class="table table-bordered table-striped">
+
+            <tr>
+                <th>Id</th>
+                <th>Faculty Name</th>
+                <th>Subject</th>
+                <th>Designation</th>
+                <th>Reason</th>
+                <th>DateFrom</th>
+                <th>DateTo</th>
+                <th>Status</th>
+                <th>Action</th>
+
+
+            </tr>
+            <tr *ngFor="let item of data">
+
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.subject}}</td>
+                <td>{{item.role}}</td>
+                <td>{{item.reason}}</td>
+                <td>{{item.dateFrom}}</td>
+                <td>{{item.dateTo}}</td>
+                <td>{{item.status}}</td>
+                <td class="m-0 p-0">
+                    <div class="row" style="max-width: 100px;">
+                        <div class="col m-0 px-1">
+                            <a (click)="delete(item.id)"><img src="../../../assets/images/delete.png" style="height: 20px; width:20px" alt=""></a>
+                        </div>
+                        <div class="col m-0 px-1">
+                            <a><img src="../../../assets/images/edit.png" style="height: 20px; width:20px" alt=""></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+</div>

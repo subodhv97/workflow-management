@@ -8,9 +8,9 @@ describe('LeaveComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LeaveComponent ]
+      declarations: [LeaveComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(LeaveComponent);
     component = fixture.componentInstance;

@@ -25,10 +25,7 @@
                                 <label class="form-label" for="form2Example17">Email address</label>
                                 <input [(ngModel)]="loginData.email" name="email" type="email" id="form2Example17" class="form-control shadow-none" placeholder="Enter Email/Username" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" #email="ngModel"
                                     [class.is-invalid]="email.invalid && email.touched">
-                                <!-- <div *ngIf="email.errors && (email.invalid && email.touched)">
-                                    <small class="text-danger" *ngIf="email.errors.required">EmailId id required</small>
-                                    <small>Enter the valid email</small>
-                                </div> -->
+
                             </div>
 
                             <div class="form-outline mb-4">

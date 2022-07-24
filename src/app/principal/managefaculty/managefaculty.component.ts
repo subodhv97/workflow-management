@@ -16,8 +16,6 @@ export class ManagefacultyComponent implements OnInit {
   constructor(private userService: UserserviceService) { }
 
   ngOnInit(): void {
-    // this.serviceData = this.userService.getdata();
-    // console.log(this.serviceData);
     this.getData();
   }
 
