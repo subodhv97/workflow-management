@@ -26,22 +26,20 @@
     <div class="container">
         <h1 class="text-center text-primary mt-3">Forum Message</h1>
     </div>
-    <table class="table ">
+    <table class="table border">
         <thead>
             <tr>
                 <!-- <th scope="col">ID</th> -->
                 <th scope="col">Name</th>
                 <th scope="col">Message</th>
-                <th scope="col">Delete Message</th>
+                <th scope="col" style="max-width: 100px;">Delete Message</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let item of data" class="m-0 p-0">
-                <!-- <th>{{item.id}}</th> -->
                 <th>{{item.name}}</th>
                 <th>{{item.message}}</th>
                 <td class="p-0"><a (click)="delete(item.id)" class="hover text-center"><img src="../../../assets/images/delete.png" alt="" class="vectorimage hover"></a></td>
-
             </tr>
         </tbody>
     </table>

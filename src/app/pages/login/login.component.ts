@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { UserserviceService } from 'src/app/services/userservice.service';
-import { User } from '../user';
+import { AddedUser } from 'src/app/services/added-user';
+import { AddeduserService } from 'src/app/services/addeduser.service';
+
 
 // import { LoginserviceService } from 'src/app/services/loginservice.service';
 
@@ -15,16 +16,9 @@ export class LoginComponent implements OnInit {
 
   message = '';
 
-  loginData = new User();
+  loginData = new AddedUser();
 
-  // public loginData = {
-  //   role: '',
-  //   username: '',
-  //   password: '',
-  // };
-  // user = new User();
-
-  constructor(private snack: MatSnackBar, private service: UserserviceService, private router: Router) { }
+  constructor(private snack: MatSnackBar, private service: AddeduserService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -33,7 +27,7 @@ export class LoginComponent implements OnInit {
   formSubmit() {
 
 
-    this.service.loginUser(this.loginData).subscribe(
+    this.service.loginAddedUser(this.loginData).subscribe(
       data => {
         console.log("response recieved");
         if (this.loginData.role == 'principal') {

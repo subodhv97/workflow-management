@@ -15,8 +15,8 @@
             <th scope="col">Dob</th>
             <th scope="col">Profile</th>
             <th scope="col">Password</th>
-            <th scope="col">Delete</th>
-            <th scope="col">Edit</th>
+            <th scope="col">Action</th>
+
 
         </tr>
     </thead>
@@ -31,10 +31,18 @@
             <td>{{item.phone}}</td>
             <td>{{item.gender}}</td>
             <td>{{item.dob}}</td>
-            <td>img{{item.profile}}</td>
+            <td>{{item.profile}}</td>
             <td>{{item.password}}</td>
-            <td class="m-0"><a (click)="delete(item.id)" class="btn btn-danger bg-dark">Delete</a></td>
-            <td class="m-0"><a (click)="edit()" class="btn btn-success">Edit</a></td>
+            <td class="m-0 p-0" style="max-width: 150px;">
+                <div class="row">
+                    <div class="col ms-3 px-1">
+                        <a (click)="delete(item.id)"><img src="../../../assets/images/delete.png" style="height: 20px; width:20px" alt=""></a>
+                    </div>
+                    <div class="col m-0 px-1">
+                        <a><img src="../../../assets/images/edit.png" style="height: 20px; width:20px" alt=""></a>
+                    </div>
+                </div>
+
         </tr>
     </tbody>
 </table>
