@@ -17,15 +17,35 @@ import { ManagefacultyComponent } from './principal/managefaculty/managefaculty.
 import { PrincipalComponent } from './principal/principal.component';
 import { QpapprovelComponent } from './principal/qpapprovel/qpapprovel.component';
 import { ForumComponent } from './principal/forum/forum.component';
+import { PrincipalHomeComponent } from './principal/principal-home/principal-home.component';
+import { HodHomeComponent } from './hod/hod-home/hod-home.component';
+import { FacultyHomeComponent } from './faculty/faculty-home/faculty-home.component';
+import { HodaddfacultyComponent } from './hod/hodaddfaculty/hodaddfaculty.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
+  {
+    path: '', component: HomeComponent, children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'contact', component: ContactComponent },
+    ]
+  },
+
+  {
+    path: 'home', component: HomeComponent, children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'contact', component: ContactComponent },
+    ]
+  },
   {
     // canActivate: [PrincipalGuard],
     path: 'principal', component: PrincipalComponent, children: [
+      { path: 'phome', component: PrincipalHomeComponent },
       { path: 'addfaculty', component: AddfacultyComponent },
       { path: 'createmeting', component: CreatemeetingComponent },
       { path: 'forum', component: ForumComponent },
@@ -38,7 +58,8 @@ const routes: Routes = [
   {
     // canActivate: [HodGuard],
     path: 'hod', component: HodComponent, children: [
-      { path: 'addfaculty', component: AddfacultyComponent },
+      { path: 'hodhome', component: HodHomeComponent },
+      { path: 'addfaculty', component: HodaddfacultyComponent },
       { path: 'approveleave', component: ApproveleaveComponent },
       { path: 'createmeeting', component: CreatemeetingComponent },
       { path: 'forum', component: ForumComponent },
@@ -50,6 +71,7 @@ const routes: Routes = [
   {
     // canActivate: [FacultyGuard],
     path: 'faculty', component: FacultyComponent, children: [
+      { path: 'fhome', component: FacultyHomeComponent },
       { path: 'forum', component: ForumComponent },
       { path: 'leave', component: LeaveComponent },
       { path: 'metingnotifiation', component: MeetingnotificationComponent },

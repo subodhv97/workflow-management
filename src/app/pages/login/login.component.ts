@@ -31,13 +31,13 @@ export class LoginComponent implements OnInit {
       data => {
         console.log("response recieved");
         if (this.loginData.role == 'principal') {
-          this.router.navigate(['/principal']);
+          this.router.navigate(['/principal/phome']);
         }
         else if (this.loginData.role == 'hod') {
-          this.router.navigate(['/hod']);
+          this.router.navigate(['/hod/hodhome']);
         }
         else if (this.loginData.role == 'faculty') {
-          this.router.navigate(['/faculty']);
+          this.router.navigate(['/faculty/fhome']);
         }
       },
       error => {

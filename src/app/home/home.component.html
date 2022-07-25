@@ -1,48 +1,19 @@
-<app-header></app-header>
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="../assets/images/home1.jpg" class="d-block w-100 homeimage" alt="...">
-            <!-- <div class="container">
-                <h1 class="text-center">Welcome to WorkFlow Management System</h1>
-            </div> -->
-            <div class="carousel-caption d-none d-md-block">
-                <h1 class="text-light m-0">Welcome to Work Flow Management System</h1>
-                <p>We provide simple and easy UI for our clients</p>
-                <button class="btn btn-primary" [routerLink]="['/login']" routerLinkActive="router-link-active">Get Started</button>
-            </div>
-        </div>
+<div class="m-0" style="background-image:url('../../assets/images/home1.jpg'); height:700px; opacity:0.7">
+    <app-header></app-header>
+    <div class="container mt-5">
+        <p class="text-center text-danger fontsize fw-bold">Welcome to WorkFlow Management System(MNC'S)</p>
     </div>
-</div>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="../assets/images/adminicon.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold fs-5">Admin Login</h5>
-                    <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="btn btn-primary">Login</a>
-                </div>
+    <div class="row mt-5">
+        <div class="col-sm-6 mt-5">
+            <div class="container mt-5 mb-0 text-light text-center">
+                <h1 class="text fw-bold">WorkFlow Management System is basically for any organization where there are three tier Like Admin Director and User like this, So we people have developed this Application for the any organization college or any other.</h1>
+                <h3 class="fw-bold text-light">Lets go ahead and take a tour to this Application</h3>
+                <button class="btn btn-success shadow-none" [routerLink]="['/login']" routerLinkActive="router-link-active"><a class=""></a>Get Started</button>
             </div>
         </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="../assets/images/adminicon.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold fs-5">HOD Login</h5>
-
-                    <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="btn btn-primary">Login</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="../assets/images/adminicon.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold fs-5">Faculty Login</h5>
-
-                    <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="btn btn-primary ">Login</a>
-                </div>
+        <div class="col-sm-6">
+            <div class="mx-3">
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>

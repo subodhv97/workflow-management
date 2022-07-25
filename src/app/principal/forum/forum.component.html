@@ -9,7 +9,7 @@
             </div>
             <div class="col">
                 <div class="mb-3">
-                    <input [(ngModel)]="forum.message" name="message" type="text" class="form-control" id="message" aria-describedby="message" placeholder="Enter message">
+                    <input [(ngModel)]="forum.message" name="message" type="text" class="form-control shadow-none" id="message" aria-describedby="message" placeholder="Enter message">
                     <div id="message" class="form-text">Leave your message here to communicate with other</div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
         <tbody>
             <tr *ngFor="let item of data" class="m-0 p-0">
                 <th>{{item.name}}</th>
-                <th>{{item.message}}</th>
+                <th class="fw-normal">{{item.message}}</th>
                 <td class="p-0"><a (click)="delete(item.id)" class="hover text-center"><img src="../../../assets/images/delete.png" alt="" class="vectorimage hover"></a></td>
             </tr>
         </tbody>

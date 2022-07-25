@@ -10,7 +10,6 @@ import { AddeduserService } from 'src/app/services/addeduser.service';
 })
 export class ManagefacultyComponent implements OnInit {
 
-  serviceData: any;
   data: any;
 
   constructor(private userService: AddeduserService) { }

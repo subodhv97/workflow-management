@@ -31,6 +31,12 @@ import { QpapprovelComponent } from './principal/qpapprovel/qpapprovel.component
 import { RequestleaveComponent } from './hod/requestleave/requestleave.component';
 import { ApproveleaveComponent } from './hod/approveleave/approveleave.component'
 import { ForumComponent } from './principal/forum/forum.component';
+import { PrincipalHomeComponent } from './principal/principal-home/principal-home.component';
+import { HodHomeComponent } from './hod/hod-home/hod-home.component';
+import { FacultyHomeComponent } from './faculty/faculty-home/faculty-home.component';
+import { HodaddfacultyComponent } from './hod/hodaddfaculty/hodaddfaculty.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
 
 // import { authInterceptorProvider } from './services/auth.intercepter';
 
@@ -63,7 +69,13 @@ import { ForumComponent } from './principal/forum/forum.component';
     QpapprovelComponent,
     RequestleaveComponent,
     ApproveleaveComponent,
-    ForumComponent
+    ForumComponent,
+    PrincipalHomeComponent,
+    HodHomeComponent,
+    FacultyHomeComponent,
+    HodaddfacultyComponent,
+    ContactComponent,
+    AboutComponent
 
 
   ],

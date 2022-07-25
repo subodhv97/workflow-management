@@ -6,8 +6,7 @@
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Role</th>
-            <th scope="col">Firstname</th>
-            <th scope="col">Lastname</th>
+            <th scope="col">Name</th>
             <th scope="col">Username</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
@@ -15,6 +14,7 @@
             <th scope="col">Dob</th>
             <th scope="col">Profile</th>
             <th scope="col">Password</th>
+            <th scope="col">Status</th>
             <th scope="col">Action</th>
 
 
@@ -22,10 +22,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let item of data">
+
             <td>{{item.id}}</td>
             <td>{{item.role}}</td>
-            <td>{{item.firstname}}</td>
-            <td>{{item.lastname}}</td>
+            <td>{{item.name}}</td>
             <td>{{item.username}}</td>
             <td>{{item.email}}</td>
             <td>{{item.phone}}</td>
@@ -33,6 +33,10 @@
             <td>{{item.dob}}</td>
             <td>{{item.profile}}</td>
             <td>{{item.password}}</td>
+            <td *ngIf="item.status === true;else success">Success</td>
+            <ng-template #success>
+                pending
+            </ng-template>
             <td class="m-0 p-0" style="max-width: 150px;">
                 <div class="row">
                     <div class="col ms-3 px-1">
@@ -42,7 +46,6 @@
                         <a><img src="../../../assets/images/edit.png" style="height: 20px; width:20px" alt=""></a>
                     </div>
                 </div>
-
         </tr>
     </tbody>
 </table>

@@ -1,1 +1,101 @@
-<p>questionpaper works!</p>
+<section class="  m-0 p-0 w-100">
+    <div class="container py-5 h-100 w-75">
+        <div class="row d-flex justify-content-center align-items-center h-100 w-100">
+
+            <div class="card rounded-3">
+
+                <div class="card-body">
+                    <h1 class="text-center my-3">Add Question</h1>
+
+                    <form class="px-md-2 my-4" (ngSubmit)="addQuestion()">
+
+
+                        <div class="form-outline my-2">
+                            <label class="form-label" for="form3Example1q">Topic Name</label>
+                            <input [(ngModel)]="question.subject" name="subject" type="text" id="subject" class="form-control shadow-none" required />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label class="form-label" for="form3Example1q">Question</label>
+                            <input [(ngModel)]="question.questionName" name="questionName" type="text" id="questionName" class="form-control shadow-none" required />
+                        </div>
+
+                        <div class="form-outline my-2">
+                            <label class="form-label" for="option1">Option1</label>
+                            <input [(ngModel)]="question.option1" name="option1" type="text" id="option1" class="form-control shadow-none" required />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label class="form-label" for="option2">Option2</label>
+                            <input [(ngModel)]="question.option2" name="option2" type="text" id="option2" class="form-control shadow-none" required />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label class="form-label" for="option3">Option3</label>
+                            <input [(ngModel)]="question.option3" name="option3" type="text" id="option3" class="form-control shadow-none" required />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label class="form-label" for="option4">Option4</label>
+                            <input [(ngModel)]="question.option4" name="option4" type="text" id="option4" class="form-control shadow-none" required />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label class="form-label" for="answer">Correct Answer</label>
+                            <input [(ngModel)]="question.answer" name="answer" type="text" id="answer" class="form-control shadow-none" required />
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container w-75">
+
+        <h1 class="text-center text-primary">See Uploaded Questions</h1>
+
+        <div class="" *ngFor="let item of datal">
+            <div class="row">
+                <h4 class="">Subject : {{item.subject}}</h4>
+                <div class="accordion accordion-flush m-0 py-0" id="accordionFlushExample" style="max-width: 800px;">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed px-1 py-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Question : {{item.questionName}}
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" />
+                                    <label class="form-check-label" for="flexRadioDisabled">{{item.option1}}</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" />
+                                    <label class="form-check-label" for="flexRadioCheckedDisabled">{{item.option2}}</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" />
+                                    <label class="form-check-label" for="flexRadioCheckedDisabled">{{item.option3}}</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" />
+                                    <label class="form-check-label" for="flexRadioCheckedDisabled">{{item.option4}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style="max-width: 100px;">
+                    <div class="col ms-1 px-1">
+                        <a (click)="delete(item.id)"><img src="../../../assets/images/delete.png" style="height: 20px; width:20px" alt=""></a>
+                    </div>
+                    <div class="col m-0 px-1">
+                        <a><img src="../../../assets/images/edit.png" style="height: 20px; width:20px" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -11,12 +11,14 @@ export class QuestionService {
   question = new Question();
 
   constructor(private http: HttpClient) { }
-  public addQuestion(question: Question) {
+
+
+  public addQuestionData(question: Question) {
     return this.http.post("http://localhost:8080/quiz/", question);
   }
 
   public getQuestionData() {
-    return this.http.get("http://localhost:8080/quiz/meetingData/").pipe(map(res => {
+    return this.http.get("http://localhost:8080/quiz/quizData/").pipe(map(res => {
       return res;
     }))
   }
