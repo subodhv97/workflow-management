@@ -1,0 +1,11 @@
+.color {
+    background-color: rgb(197, 193, 193);
+}
+
+.text-color {
+    color: rgb(10, 40, 132);
+}
+
+.space {
+    justify-content: space-around;
+}

@@ -1,0 +1,26 @@
+h2{
+    text-align: center;
+}
+.paperform{
+        
+}
+
+input{
+    width: 40%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical;
+    
+   
+}
+
+li{
+    list-style-type: none;
+}
+button{
+    margin-left: 16%;
+    align-content: center;
+    background-color:rgb(16, 106, 241);
+    color: white;
+}
